@@ -1,0 +1,114 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.application"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:3:5-66
+11-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:4:5-78
+12-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:4:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:5:5-80
+13-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:5:22-78
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:6:5-79
+14-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:6:22-76
+15
+16    <application
+16-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:7:4-44:19
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.1.0] /home/probe/.gradle/caches/transforms-2/files-2.1/2e94107f30f39be366a17347c2bf100b/core-1.1.0/AndroidManifest.xml:24:18-86
+18        android:icon="@mipmap/ic_launcher"
+18-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:9:9-43
+19        android:label="Weather@PROBE" >
+19-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:8:9-38
+20        <activity
+20-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:10:9-38:20
+21            android:name="com.example.application.MainActivity"
+21-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:11:13-41
+22            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+22-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:14:13-163
+23            android:hardwareAccelerated="true"
+23-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:15:13-47
+24            android:launchMode="singleTop"
+24-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:12:13-43
+25            android:theme="@style/LaunchTheme"
+25-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:13:13-47
+26            android:windowSoftInputMode="adjustResize" >
+26-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:16:13-55
+27
+28            <!--
+29                 Specifies an Android theme to apply to this Activity as soon as
+30                 the Android process has started. This theme is visible to the user
+31                 while the Flutter UI initializes. After that, this theme continues
+32                 to determine the Window background behind the Flutter UI.
+33            -->
+34            <meta-data
+34-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:21:13-24:17
+35                android:name="io.flutter.embedding.android.NormalTheme"
+35-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:22:15-70
+36                android:resource="@style/NormalTheme" />
+36-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:23:15-52
+37            <!--
+38                 Displays an Android View that continues showing the launch screen
+39                 Drawable until Flutter paints its first frame, then this splash
+40                 screen fades out. A splash screen is useful to avoid any visual
+41                 gap between the end of Android's launch screen and the painting of
+42                 Flutter's first frame.
+43            -->
+44            <meta-data
+44-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:30:13-33:17
+45                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+45-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:31:15-79
+46                android:resource="@drawable/launch_background" />
+46-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:32:15-61
+47
+48            <intent-filter>
+48-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:34:13-37:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:35:17-68
+49-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:35:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:36:17-76
+51-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:36:27-74
+52            </intent-filter>
+53        </activity>
+54        <!--
+55             Don't delete the meta-data below.
+56             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+57        -->
+58        <meta-data
+58-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:41:9-43:33
+59            android:name="flutterEmbedding"
+59-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:42:13-44
+60            android:value="2" />
+60-->/home/probe/worker/application/android/app/src/main/AndroidManifest.xml:43:13-30
+61
+62        <activity
+62-->[com.google.android.gms:play-services-base:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/7c879cb157fab2c9a5d74c3d70fd64e3/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+63            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+63-->[com.google.android.gms:play-services-base:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/7c879cb157fab2c9a5d74c3d70fd64e3/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+64            android:exported="false"
+64-->[com.google.android.gms:play-services-base:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/7c879cb157fab2c9a5d74c3d70fd64e3/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+65            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+65-->[com.google.android.gms:play-services-base:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/7c879cb157fab2c9a5d74c3d70fd64e3/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+66
+67        <meta-data
+67-->[com.google.android.gms:play-services-basement:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/3c8e7eb3d21ac94d08f658f6d8a1c9f3/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+68            android:name="com.google.android.gms.version"
+68-->[com.google.android.gms:play-services-basement:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/3c8e7eb3d21ac94d08f658f6d8a1c9f3/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+69            android:value="@integer/google_play_services_version" />
+69-->[com.google.android.gms:play-services-basement:17.0.0] /home/probe/.gradle/caches/transforms-2/files-2.1/3c8e7eb3d21ac94d08f658f6d8a1c9f3/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+70    </application>
+71
+72</manifest>

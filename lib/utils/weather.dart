@@ -10,13 +10,14 @@ class WeatherData {
   WeatherData({@required this.locationData});
 
   LocationHelper locationData;
-  int currentTemperature, currentCondition;
+  int currentCondition;
+  double currentTemperature;
   String currentLocation;
 
   Future<void> getCurrentTemperature() async {
     Response response = await get(
       Uri.parse(
-        'http://api.openweathermap.org/data/2.5/weather?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=${apiKey}&units=metric',
+        'https://api.openweathermap.org/data/2.5/weather?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=${apiKey}&units=metric',
       ),
     );
 
@@ -27,7 +28,61 @@ class WeatherData {
 
       try {
         currentTemperature = currentWeather['main']['temp'];
+        currentCondition = currentWeather['weather'][0]['id'];
+        currentLocation = currentWeather['name'];
+      } catch (e) {
+        print(e);
+      }
+    } else {
+      print('could not fetch temperature!');
+    }
+  }
+
+  WeatherDisplayData getWeatherDisplayData() {
+    if (currentCondition < 600) {
+      return WeatherDisplayData(
+        weatherIcon: Icon(
+          FontAwesomeIcons.cloud,
+          size: 50,
+          color: Colors.white,
+        ),
+        weatherImage: AssetImage(
+          'asset/cloud.png',
+        ),
+      );
+    } else {
+      var now = DateTime.now();
+
+      if (now.hour >= 15) {
+        return WeatherDisplayData(
+          weatherIcon: Icon(
+            FontAwesomeIcons.cloudMoon,
+            size: 50,
+            color: Colors.white,
+          ),
+          weatherImage: AssetImage(
+            'asset/night.png',
+          ),
+        );
+      } else {
+        return WeatherDisplayData(
+          weatherIcon: Icon(
+            FontAwesomeIcons.cloudSun,
+            size: 50,
+            color: Colors.white,
+          ),
+          weatherImage: AssetImage(
+            'asset/sunny.png',
+          ),
+        );
       }
     }
   }
+}
+
+class WeatherDisplayData {
+  Icon weatherIcon;
+  AssetImage weatherImage;
+
+  WeatherDisplayData({@required this.weatherIcon, @required this.weatherImage});
 }
